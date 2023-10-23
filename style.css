@@ -1,0 +1,341 @@
+:root {
+    --color1: #F7F7F7; 
+    --color2: #FFE1E1;
+    --color3: #FFE0F0; 
+    --color4: #F97098;
+    --color5: #333; 
+    --color6: #A4D7E6;
+    --color7: #D8BFD8; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(180deg, var(--color1), var(--color2));
+    background-size: 100% 200%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s;
+    animation: scrollColors 40s linear infinite;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.container {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+header {
+    background-color: var(--color4); 
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--color5);
+    margin: 4px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color6);
+}
+
+
+#profile {
+    background-color: var(--color7); 
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color7);
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-name {
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--profile-name-color);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.contact-info {
+    flex: 1;
+    align-items: flex-start;
+}
+
+.contact-info h1,
+.contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.skills {
+    background-color: var(--color3); 
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.skill-item {
+    flex: 1;
+    border: 1px solid var(--skill-border-color);
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+}
+footer {
+    background-color: var(--color6); 
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    background-color: var(--color2); 
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon-link {
+    margin: 10px;
+    text-align: center;
+}
+
+.icon-link img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-link a {
+    text-decoration: none;
+    color: #333;
+}
+
+.icon-link:hover img {
+    filter: brightness(70%);
+}
+
+
+@media (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .profile-container {
+        padding: 10px;
+    }
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    .profile-name {
+        font-size: 20px;
+    }
+    .skill-list {
+        flex-direction: column;
+        text-align: center;
+    }
+    .skill-item {
+        flex: 1;
+        margin: 5px;
+        padding: 10px;
+        font-weight: bold;
+    }
+    .social-media-icons {
+        flex-direction: column;
+    }
+    .icon-link {
+        margin: 10px;
+        text-align: center;
+    }
+    .icon-link img {
+        width: 50px;
+        height: 50px;
+    }
+    .icon-link a {
+        text-decoration: none;
+        color: #333;
+    }
+    .icon-link:hover img {
+        filter: brightness(70%);
+    }
+}
+
+
+@keyframes scrollColors {
+    0% {
+        --color1: #FADDEA; 
+        --color2: #FFBADF; 
+    }
+    25% {
+        --color1: #F4BBD7; 
+        --color2: #FFBADF; 
+    }
+    50% {
+        --color1: #FF9AB3; 
+        --color2: #FFB3B3; 
+    }
+    75% {
+        --color1: #F4BBD7; 
+        --color2: #FFBADF; 
+    }
+    100% {
+        --color1: #FADDEA; 
+        --color2: #FFBADF; 
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+}
+
+.arrow {
+    height: 50px;
+    width: 75px;
+    margin-right: 150px;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--color5);
+}
+.scroll-to-top-checkbox {
+    display: none;
+}
+
+.scroll-to-top-label {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f99fea; /* Background color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Makes it rounded */
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it appears above other elements */
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top-checkbox:checked + .scroll-to-top-label {
+    display: block;
+}
+
+.scroll-to-top-label .arrow {
+    font-size: 24px; /* Adjust the size of the arrow */
+    line-height: 1;
+}
+
+
+.arrow {
+    height: 50px;
+    width: 75px;
+    margin-right: 150px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F19DA3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #FB8DA0; 
+}
+
+.scroll-to-top img {
+    width: 30px;
+    height: 30px;
+}
+
